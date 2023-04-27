@@ -1,0 +1,36 @@
+div:hover{
+    border:2px solid black;
+}
+
+
+#primeiro{
+    background-color: blue;
+}
+#segundo{
+    background-color: pink;
+}
+#terceiro{
+    background-color: red;
+    height: 100px;
+}
+#quarto{
+    background-color: yellow;
+}
+#quinto{
+    background-color: orange;
+}
+
+h3:hover{
+    border: 1px solid aqua;
+}
+
+h3{
+    color: blueviolet;
+    font-size: 20px;
+    font-family: cursive;
+    font-style:oblique;
+}
+
+#pcor1, #pcor2, #pcor3{
+    font-style: italic;
+}   
