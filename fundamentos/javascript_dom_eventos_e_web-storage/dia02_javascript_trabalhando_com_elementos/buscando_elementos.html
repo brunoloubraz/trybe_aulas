@@ -1,0 +1,32 @@
+<main id="parent-of-parent">
+  <section id="parent">
+    <section id="first-child"></section>
+    <section id="where-are-you">
+      <section id="first-child-of-child"></section>
+    </section>
+    Attention!
+    <section id="third-child"></section>
+    <section id="fourth-and-last-child"></section>
+  </section>
+</main>
+<script>
+  document.querySelector('#where-are-you') 
+  document.querySelector('#where-are-you').parentElement 
+  document.querySelector('#where-are-you').children.innerText = "olá"
+  const filhoDofilho = document.querySelector('#where-are-you').children
+
+  const whereAreYou = document.querySelector('#first-child').nextElementSibling
+  const parent =  document.querySelector('#where-are-you').parentElement;
+  parent.style.backgroundColor = "pink"
+  document.querySelector('#where-are-you') 
+  filhoDofilho.style.backgroundColor = 'black'
+  const nodes = document.querySelector('#parent').childNodes;
+
+
+
+  document.querySelector('#parent').firstElementChild;
+  document.querySelector('#where-are-you').previousElementSibling;
+  document.querySelector('#where-are-you').nextSibling;
+  document.querySelector('#where-are-you').nextElementSibling;
+
+</script>
