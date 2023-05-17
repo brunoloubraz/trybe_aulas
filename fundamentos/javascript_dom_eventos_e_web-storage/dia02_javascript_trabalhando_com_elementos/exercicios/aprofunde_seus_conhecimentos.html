@@ -114,12 +114,41 @@
       for (let index = 0; index < description.length; index += 1) {
         description[index].className = 'description';        
       }
+      
+      //
 
-      const deleta1 = querySelector('.main-content')
-      const deletado = querySelector('.left-content')
-      deleta1.removeChild(deleta1.firsElementChild)
+      const deleta1 = document.querySelector('.main-content')
+      const deletado = document.querySelector('.left-content')
+      deleta1.removeChild(deletado)
 
       
+      //
+
+      const centralizaSection = document.querySelector('.right-content')
+      centralizaSection.style.margin = 'auto';
+    
+      //
+
+      const centerContent = document.querySelector('.center-content');
+      centerContent.style.backgroundColor = 'green';
+
+      //
+       const li = document.querySelectorAll('li')
+       const vaiDeletar = centralizaSection.lastChild
+       const ultimoFilho = li.lastChild;
+      
+      //  vaiDeletar.removeChild(vaiDeletar.lastChild)
+      //  vaiDeletar.removeChild(vaiDeletar.lastChild)
+
+      for (let index = 0; index < 2; index += 1) {
+        vaiDeletar.removeChild(vaiDeletar.lastChild)
+        
+      }
+       
+      // for (let index = 0; index < 2; index += 1) {
+      //   vaiDeletar.removeChild(ultimoFilho)
+      // }
+
     </script>
   </body>
 </html>
