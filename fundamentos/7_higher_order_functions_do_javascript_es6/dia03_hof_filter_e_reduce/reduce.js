@@ -35,21 +35,21 @@
 
 
 //dois exmeplos feitos da mesma maneira
-const nuumbers = [50, 85, -30, 3, 15];
+// const nuumbers = [50, 85, -30, 3, 15];
 
-let n = nuumbers.reduce((bigger, number) => bigger > number ? bigger : number);
+// let n = nuumbers.reduce((bigger, number) => bigger > number ? bigger : number);
 
-console.log(n);
+// console.log(n);
 
-let x = nuumbers.reduce((acc, curr) => {
-  if (acc > curr) {
-    return acc
-  } else {
-    return curr
-  }
-}, 0);
+// let x = nuumbers.reduce((acc, curr) => {
+//   if (acc > curr) {
+//     return acc
+//   } else {
+//     return curr
+//   }
+// }, 0);
 
-console.log(x);
+// console.log(x);
 
 
 //PARA FIXAR
@@ -57,7 +57,21 @@ console.log(x);
 //1
 const numbers = [18, 19, 23, 53, 4, 5, 76, 23, 54];
 
-let y = numbers.reduce((acc, curr) => {
+// const somaPares = () => {
+//   let pares = [];
+//   let soma = 0;
 
+//   numbers.filter((numero) => numero % 2 === 0 ? pares.push(numero) : numero)
+//   soma = pares.reduce((total, index) =>  total += index)
+//   return soma;
+// }
 
-},)
+// console.log(somaPares());
+
+const somaPares = () => {
+  soma = 0;
+  numbers.reduce((total, index) => index % 2 === 0 ? soma += index : index, 0);
+  return soma
+}
+
+console.log(somaPares());
