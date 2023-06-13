@@ -2,7 +2,9 @@ const myList = [5, 2, 3];
 
 // escreva swap abaixo
 
-const swap = (lista) =>  [lista] = [lista[2],lista[1],lista[0]] 
+// const swap = (lista) =>  [lista] = [lista[2],lista[1],lista[0]] 
+
+const swap = ([a, b, c]) => [c, b, a];
 
 console.log(swap(myList));
 
@@ -14,14 +16,16 @@ const chiron = ['Chiron', 'Bugatti', 2016];
 
 // escreva toObject abaixo
 
-const toObject = (lista) => {
-  const modelo = {
-    nome: lista[0],
-    fabricante: lista[1],
-    ano: lista[2],
-  }
-  return modelo
-}
+// const toObject = (lista) => {
+//   const modelo = {
+//     nome: lista[0],
+//     fabricante: lista[1],
+//     ano: lista[2],
+//   }
+//   return modelo
+// }
+
+const toObject = ([name, brand, year]) => ({ name, brand, year });
 
 console.log(toObject(palio));
 
@@ -54,7 +58,12 @@ const student2 = {
 
 // escreva 'getLastName' abaixo para receber os objetos e retornar sua propriedade `lastName`
 
-const getLastName = (info) => info.lastName === undefined ? 'lastname não preenchido' : info.lastName
+// const getLastName = (info) => info.lastName === undefined ? 'lastname não preenchido' : info.lastName
+
+const getLastName = (objStudent) => {
+  const { lastName = `lastName não preenchido` } = objStudent;
+  return lastName;
+}
 
 console.log(getLastName(student1));
 console.log(getLastName(student2));
