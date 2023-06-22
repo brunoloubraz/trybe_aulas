@@ -1,0 +1,73 @@
+#box {
+  background-color: #232325;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px black solid;
+  /* min-height: 100vh; */
+}
+
+body {
+  background-color: #1A1C1C;
+  color: white;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#cpfOrEmail{
+  background-color: #333333;
+  display: flex;
+  width: 80%;
+  height: 40px;
+  margin: 10px;
+  border: 2px black solid;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  padding-left: 30px;
+}
+
+button {
+  background-color:#333333;
+  border: 2px black solid;
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  border-radius: 5px;
+  cursor:pointer;
+  /* margin: px; */
+  width: 80%;
+}
+
+#answer {
+  color: white;
+  background-color: #333333;
+  width: 72%;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px black solid;
+  font-size: 18px;
+  padding-left: 30px;
+}
+
+#answer:hover {
+  background-color: #525050;;
+  transition: 1s;
+}
+#cpfOrEmail:hover {
+  background-color: #525050;;
+  transition: 1s;
+}
+button:hover {
+  background-color: #525050;;
+  transition: 1s;
+}
