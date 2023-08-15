@@ -1,33 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import styled from "styled-components"
+// import {Header, Container} from './styles.tsx'
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
+  // utilize styled.{tag que deve ser renderizada} para escolher qual elemento HTML você quer renderizar
+  const Header = styled.header`
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1em;
+      background-color: #022c16;
+      margin-bottom: 3em;
+  `;
+
+  // adicione os estilos CSS entre as crases ``
+  const Container = styled.div`
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+  `;
+
+  return(
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header>
+        <h1>Título</h1>
+      </Header>
+    
+      <Container>
+        <p>Conteúdo</p>
+      </Container>
     </>
   )
 }
