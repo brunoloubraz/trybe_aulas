@@ -74,6 +74,16 @@ describe('Testando a API Cacau Trybe', function () {
     });
   });
 
+  describe('Testes de integração para o endpoint GET /chocolates/total', function() {
+    it('Retorna "totalChocolates": 4', async function () {
+      const response = await chai
+        .request(app)
+        .get('/chocolates/total')
+    expect(response.status).to.be.equal(200);
+    expect(response.body).to.deep.equal({ totalChocolates: 4 })
+    })
+  })
+
   describe('Usando o método GET em /chocolates/:id para buscar o ID 4', function() {
     it('Retorna o chocolate Mounds', async function () {
       const output = { id: 4, name: 'Mounds', brandId: 3 };
@@ -119,4 +129,64 @@ describe('Testando a API Cacau Trybe', function () {
     })
   })
 
+  describe('Crie os testes de integração para o endpoint GET /chocolates/search', function () {
+    it('verificando o código e o retorno esperado para quando existirem chocolates com o nome informado', async function () {
+      const output = [
+        {
+          "id": 3,
+          "name": "Mon Chéri",
+          "brandId": 2
+        },
+        {
+          "id": 4,
+          "name": "Mounds",
+          "brandId": 3
+        }
+      ]
+      const response = await chai
+        .request(app)
+        .get('/chocolates/search?name=Mo')
+      expect(response.status).to.be.equal(200)
+      expect(response.body).to.deep.equal(output)
+    });
+  });
+
+  describe('Crie os testes de integração para o endpoint GET /chocolates/search', function () {
+    it('Crie um caso para quando não existirem chocolates com o nome informado', async function () {
+      const response = await chai
+        .request(app)
+        .get('/chocolates/search?name=ZZZ')
+      expect(response.status).to.be.equal(404)
+      expect(response.body).to.deep.equal([])
+    });
+  });
+
+  describe('Crie os testes de integração para o endpoint PUT /chocolates/:id', function () {
+    it('Crie um caso verificando o código e o retorno esperado para quando o chocolate é atualizado', async function () {
+      const response = await chai
+        .request(app)
+        .put('/chocolates/1').send({
+          name: 'Mint Pretty Good',
+          brandId: 2,
+        });
+      expect(response.status).to.be.equal(200)
+      expect(response.body.chocolate).to.deep.equal({
+        "chocolate": { 
+          "id": 1,
+          "name": "Mint Pretty Good",
+          "brandId": 2
+        }
+      })
+    });
+    it('Crie um caso para quando não existe chocolate com o id informado', async function () {
+      const response = await chai
+        .request(app)
+        .put('/chocolates/555').send({
+          name: 'Mint Pretty Good',
+          brandId: 2,
+        });
+      expect(response.status).to.be.equal(404)
+      expect(response.body).to.deep.equal({ message: "chocolate not found" })
+    });
+  });
 });
