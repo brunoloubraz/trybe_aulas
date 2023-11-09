@@ -1,14 +1,14 @@
 const app = require('./app');
-const connection = require('./db/connection');
 
-const PORT = 3001;
+const PORT = 3000;
+
+// app.get('/health/live', (req, res) => {
+//   res.status(200).json({ message: 'online' })
+// })
 
 app.listen(PORT, async () => {
   console.log(`API TrybeCash está sendo executada na porta ${PORT}`);
-
-  // O código abaixo é para testarmos a comunicação com o MySQL
-  const [result] = await connection.execute('SELECT 1');
-  if (result) {
-    console.log('MySQL connection OK');
-  }
+  //  Para linux abaixo
+  // console.log(`Valor da variável de ambiente $USER: ${process.env.USER}`);
+  console.log(`Valor da variável de ambiente USERNAME: ${process.env.USERNAME}`);
 });
