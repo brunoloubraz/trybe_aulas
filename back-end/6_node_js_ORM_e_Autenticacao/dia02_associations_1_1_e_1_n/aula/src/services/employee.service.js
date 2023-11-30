@@ -1,6 +1,10 @@
 // src/services/employee.service.js
+const Sequelize = require('sequelize');
+const config = require('../config/config');
 
 const { Address, Employee } = require('../models/');
+const env = process.env.NODE_ENV || 'development';
+const sequelize = new Sequelize(config[env]);
 
 const getAll = async () => {
   const users = await Employee.findAll({
