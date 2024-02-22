@@ -47,7 +47,9 @@ def painting(wallSize):
   
 print(painting(100))
 
-# 6
+# EXERCICIOS BONUS
+
+# 2
 def isTriangle(side1, side2, side3):
     if (side1 + side2) > side3 and  (side2 + side3) > side1 and  (side1 + side3) > side2:
         if side1 == side2 == side3:
@@ -59,4 +61,34 @@ def isTriangle(side1, side2, side3):
     else:
         return False
     
-print(isTriangle(3,3,123))
+    
+def piramid(n):
+    for index in range(n+1):
+        print(index * '*')
+    
+piramid(5)
+
+# 3
+
+def somatoria(n):
+    total = 0
+    for item in range(n+1):
+        total += item
+    return total
+
+print(somatoria(10))
+
+# 4
+def abastecimento(type, litros):
+    gasPrice = 2.5
+    alcoholPrice = 1.9
+    if litros <= 20 and type == "G":
+        return litros * (gasPrice - (gasPrice * 0.04))
+    if litros > 20 and type == "G":
+        return litros * (gasPrice - (gasPrice * 0.06))
+    if litros <= 20 and type == "A":
+        return litros * (alcoholPrice - (alcoholPrice * 0.03))
+    if litros > 20 and type == "A":
+        return litros * (alcoholPrice - (alcoholPrice * 0.05))
+
+print(abastecimento('A', 30))
