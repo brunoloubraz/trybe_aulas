@@ -15,7 +15,7 @@ def create_phone_number(n):
         else:
             response.append(word)
     return ''.join(response)
-    
+
 
 def create_phone_number(n):
 	return "({}{}{}) {}{}{}-{}{}{}{}".format(*n)
