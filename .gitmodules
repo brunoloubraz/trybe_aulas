@@ -4,3 +4,6 @@
 [submodule "back-end/8_introducao_a_typescript/dia02_introducao_a_generics/back-end/8_introducao_a_typescript/dia02_introducao_a_generics/exercicios/sd-033-a-exercise-mercadinho-do-sr-scott"]
 	path = back-end/8_introducao_a_typescript/dia02_introducao_a_generics/back-end/8_introducao_a_typescript/dia02_introducao_a_generics/exercicios/sd-033-a-exercise-mercadinho-do-sr-scott
 	url = https://github.com/tryber/sd-033-a-exercise-mercadinho-do-sr-scott
+[submodule "ciencia-da-computacao/ciencia-da-computacao/2_algoritmos/dia01_complexidade_de_algoritmos/sd-033-a-exercise-battleship"]
+	path = ciencia-da-computacao/ciencia-da-computacao/2_algoritmos/dia01_complexidade_de_algoritmos/sd-033-a-exercise-battleship
+	url = https://github.com/tryber/sd-033-a-exercise-battleship
